@@ -7,7 +7,8 @@ plotly
 statsmodels
 scipy
 pmdarima
-small_footnote
+ml_rev
+
 
 
 
