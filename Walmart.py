@@ -16,7 +16,16 @@ from statsmodels.tsa.arima.model import ARIMA  # ARIMA forecasting model
 from scipy import stats  # Statistical functions for normality tests
 import warnings
 
-from ml_rev import small_footnote
+
+
+# Replacement for ml_rev.small_footnote
+def small_footnote(text):
+    st.markdown(f"<sub style='color:gray'>{text}</sub>", unsafe_allow_html=True)
+
+# Example usage
+st.write("Here is a chart")
+small_footnote("This is a small footnote below the chart")
+
 
 warnings.filterwarnings('ignore')  # Suppress warning messages
 
@@ -1040,4 +1049,5 @@ else:
 
 # Footer section
 st.markdown("---")  # Horizontal line separator
+
 st.markdown("Built with Streamlit 🎈 | Sales Prediction Analytics")  # Footer text
